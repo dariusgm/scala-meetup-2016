@@ -1,7 +1,7 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://localhost:9000</value>
+        <value>hdfs://0.0.0.0:9000</value>
     </property>
     <property>
         <name>name</name>
@@ -9,6 +9,6 @@
     </property>
     <property>
         <name>hadoop.http.staticuser.user</name>
-        <value>hadoopuser</value>
+        <value>root</value>
     </property>
 </configuration>

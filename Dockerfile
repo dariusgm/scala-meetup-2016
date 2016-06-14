@@ -39,8 +39,7 @@ ENV HIVE_HOME=/usr/local/hive
 ENV PATH=$HIVE_HOME:$HADOOP_HOME:$PATH
 ENV JAVA_HOME=/usr/
 
-ENV SPARK_MASTER_IP=192.168.99.100
-ENV SPARK_PUBLIC_DNS=localhost
+ENV SPARK_MASTER_IP=0.0.0.0
 ENV SPARK_MASTER_WEBUI_PORT=7088
 ENV SPARK_WORKER_PORT=7090
 
@@ -85,5 +84,5 @@ ENTRYPOINT service ssh start && \
     /usr/local/hadoop/sbin/start-dfs.sh && \
     /usr/local/hadoop/bin/hadoop fs -copyFromLocal /tmp/folk/folk.csv /folk.csv && \
     /usr/local/spark/sbin/start-master.sh && \
-    /usr/local/spark/sbin/start-slave.sh spark://localhost:7077 && \
+    /usr/local/spark/sbin/start-slave.sh spark://127.0.0.1:7077 && \
     /usr/local/hive/bin/hive --service hiveserver2
