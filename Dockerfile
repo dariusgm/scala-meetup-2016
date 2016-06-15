@@ -60,6 +60,9 @@ RUN /usr/local/hive/bin/schematool -initSchema -dbType derby
 # Hadoop Resource Manager
 EXPOSE 8088
 
+# HDFS
+EXPOSE 9000
+
 # Hadoop NameNode
 EXPOSE 50070
 
@@ -76,7 +79,7 @@ EXPOSE 10000
 EXPOSE 7077 7088 7090 8081
 
 # Start sshd, allow ssh connection for pseudo distributed mode, yarn, datanode and namenode, hive2 - move this to docker compose.
-ENTRYPOINT service ssh start && \
+CMD service ssh start && \
     ssh-keyscan localhost > /root/.ssh/known_hosts && \
     ssh-keyscan ::1 >> /root/.ssh/known_hosts && \
     ssh-keyscan 0.0.0.0 >> /root/.ssh/known_hosts && \
