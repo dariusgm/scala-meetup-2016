@@ -33,6 +33,16 @@
             <artifactId>spark-core_2.10</artifactId>
             <version>1.6.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.10</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalaj</groupId>
+            <artifactId>scalaj-http_2.10</artifactId>
+            <version>2.3.0</version>
+        </dependency>
         <!-- http://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
