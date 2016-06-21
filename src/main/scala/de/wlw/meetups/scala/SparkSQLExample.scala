@@ -28,6 +28,7 @@ object SparkSQLExample extends App {
 
 
   val sqlContext = new SQLContext(sc)
+  // or using SQL Queries: val df = sqlContext.sql("SELECT * FROM table")
   import sqlContext.implicits._
 
   val df = mappedResult.toDF()
